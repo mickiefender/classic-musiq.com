@@ -80,6 +80,50 @@ header h1 {
   background-color: #ff3300;
 }
 
+/* Main Layout */
+main {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+  gap: 20px; /* Space between sections */
+  padding: 20px;
+  width: 100%; /* Full width */
+}
+
+/* Song List */
+.song-list {
+  flex: 2; /* Take more space */
+  background-color: #ded5da;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Full width */
+}
+
+/* Playlist Container */
+.playlist-container {
+  flex: 1; /* Take less space */
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Full width */
+}
+
+/* Make sure titles for both sections are styled */
+.playlist-container h2, .song-list h2 {
+  margin-bottom: 15px; /* Space below the heading */
+}
+
+/* Responsive Design for Layout */
+@media (max-width: 768px) {
+  main {
+      flex-direction: column; /* Stack sections vertically on smaller screens */
+  }
+
+  .song-list, .playlist-container {
+      width: 100%; /* Full width for both sections */
+  }
+}
 
 /* Song Items */
 .song-item {
@@ -89,7 +133,6 @@ header h1 {
   padding: 15px;
   border-radius: 24px;
   background-color: #fff;
-  justify-content: space-between; /* Space between elements*/
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -130,31 +173,12 @@ header h1 {
   border-radius: 4px;
   cursor: pointer;
   font-size: 14px;
-  margin-left: auto; /* Space between buttons */
+  margin-left: 5px; /* Space between buttons */
   transition: background-color 0.3s ease;
-  
 }
 
 .song-item button:hover {
   background-color: #ff3300;
-}
-
-/* Responsive adjustments for small screens */
-@media (max-width: 768px) {
-  .song-item {
-      flex-direction: row; /* Ensure row layout for small screens */
-      justify-content: flex-start; /* Align items to the start */
-      align-items: center; /* Center align items vertically */
-  }
-
-  .song-item img {
-      margin-right: 10px; /* Space between image and button */
-  }
-
-  /* Keep the button on the right */
-  .song-item button {
-      margin-left: auto; /* Ensure the button stays on the right */
-  }
 }
 
 /* Media Player */
@@ -184,14 +208,13 @@ header h1 {
 }
 
 .media-controls button {
-  padding: 5px 10px;
+  padding: 10px 15px;
   background-color: #133114; /* Button background color */
   color: white; /* Button text color */
   border: none;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  font-size: 14px;
 }
 
 .media-controls button:hover {
