@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music App</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Classic Musiq</h1>
+    <div class="search-bar">
+      <input type="text" id="search" placeholder="Search by title, artist, or album..." />
+      <button onclick="searchSongs()">Search</button>
+    </div>
+  </header>
+  <select id="country-select" onchange="filterByCountry()">
+    <option value="">Select a Country</option>
+    <option value="Angola">Angola</option>
+    <option value="Benin">Benin</option>
+    <option value="Botswana">Botswana</option>
+    <option value="Burkina faso">Burkina faso</option>
+    <option value="Burundi">Burundi</option>
+    <option value="Cameroon">Cameroon</option>
+    <option value="DCR">DCR</option>
+    <option value="Ethiopia">Ethiopia</option>
+    <option value="Ghana">Ghana</option>
+    <option value="Ivory Coast">Ivory Coast</option>
+    <option value="Lesotho">Lesotho</option>
+    <option value="Liberia">Liberia</option>
+    <option value="Malawi">Malawi</option>
+    <option value="Moritius">Moritius</option>
+    <option value="Mozambique">Mozambique</option>
+    <option value="Namibia">Namibia</option>
+    <option value="Nigeria">Nigeria</option>
+    <option value="Niger">Niger</option>
+    <option value="Rwanda">Rwanda</option>
+    <option value="Senegal">Senegal</option>
+    <option value="Sierra Leon">Sierra Leon</option>
+    <option value="South Africa">South Africa</option>
+    <option value="Sudan">Sudan</option>
+    <option value="Tanzania">Tanzania</option>
+    <option value="Togo">Togo</option>
+    <option value="Kenya">UKenya</option>
+    <option value="Uganda">Uganda</option>
+    <option value="Zambia">Zambia</option>
+    <option value="Zimbabwe">Zimbabwe</option>
+    <option value="Others">Others</option>
+    <!-- Add more countries as needed -->
+</select>
+
+<div id="genre-buttons">
+  <button onclick="filterByGenre('All')">All genre</button>
+  <button onclick="filterByGenre('Raggae')">Raggae</button>
+  <button onclick="filterByGenre('Afrobeat')">Afrobeat</button>
+  <button onclick="filterByGenre('Amapiano')">Amapiano</button>
+  <button onclick="filterByGenre('Gospel')">Gospel</button>
+  <button onclick="filterByGenre('Highlife')">Highlife</button>
+  <button onclick="filterByGenre('R&B')">R&B</button>
+  <button onclick="filterByGenre('Hip Hop')">Hip Hop</button>
+  <button onclick="filterByGenre('DJ Mix')">DJ Mix</button>
+</div>
+
+  <main>
+    <section class="song-list">
+      <h2>Available Songs</h2>
+      <div id="songs">
+        <!-- Song items will be dynamically inserted here -->
+      </div>
+    </section>
+
+    <section class="media-player" id="media-player">
+      <h2>Now Playing</h2>
+      <img src="cover pics/My pic.jpeg" alt="Album Art" id="album-art">
+      <h3 id="song-title">WELCOME TO CLASSIC MUSIQ</h3>
+      <p id="song-artist"><i> Created by mickie</i></p>
+      <audio id="audio-player" controls></audio>
+
+
+
+     <div class="media-controls">
+    <button id="shuffle-btn" onclick="toggleShuffle()">
+      <i class="fas fa-random"></i> </button>
+
+    <button id="prev-btn" onclick="skipPrev()">
+      <i class="fas fa-backward"></i></button>
+
+    <button id="play-pause-btn" onclick="playPause()">
+      <i class="fas fa-play pause"></i></button>
+
+    <button id="next-btn" onclick="skipNext()">
+      <i class="fas fa-forward"></i></button>
+
+    <button id="repeat-btn" onclick="toggleRepeat()">
+      <i class="fas fa-repeat"></i></button>
+
+    <button id="stop-btn" onclick="stopSong()">
+      <i class="fas fa-stop"></i></button>
+  
+</div>
+
+    </section>
+
+   <!-- Playlist Section -->
+   <div id="playlists">
+    <h2>Your Playlists</h2>
+    <div class="playlist">
+        <h3 onclick="togglePlaylist('ghana-songs')">Ghanaian Hits</h3>
+        <div class="playlist-songs" id="ghana-songs"></div>
+  </div>
+
+    <div class="playlist">
+        <h3 onclick="togglePlaylist('us-songs')">US Hits</h3>
+        <div class="playlist-songs" id="us-songs"></div>
+    </div>
+
+    
+    <div class="playlist">
+        <h3 onclick="togglePlaylist('black-sherif')">black Sherif</h3>
+        <div class="artist-songs" id="black-sherif"></div>
+    </div>
+    <div class="playlist">
+      <h3 onclick="togglePlaylist('Nigeria-songs')">Nigeria Hits</h3>
+      <div class="playlist-songs" id="Nigeria-songs"></div>
+  </div>
+  <div class="playlist">
+    <h3 onclick="togglePlaylist('Kenya-songs')">Kenya Hits</h3>
+    <div class="playlist-songs" id="Kenya-songs"></div>
+</div>
+<div class="playlist">
+  <h3 onclick="togglePlaylist('Tanzania-songs')">Tanzania Hits</h3>
+  <div class="playlist-songs" id="Tanzania-songs"></div>
+</div>
+<div class="playlist">
+  <h3 onclick="togglePlaylist('South Africa-songs')">South Africa Hits</h3>
+  <div class="playlist-songs" id="South Africa-songs"></div>
+</div>
+<div class="playlist">
+  <h3 onclick="togglePlaylist('Uganda-songs')">Uganda Hits</h3>
+  <div class="playlist-songs" id="Uganda-songs"></div>
+</div>
+
+</div>
+
+
+  </main>
+ 
+
+  <script src="index.js"></script>
+
+  <!-- Footer Section -->
+  <div class="social-media">
+    <a href="https://www.facebook.com" target="_blank" class="social-icon">
+        <img src="icons/facebook.svg" alt="Facebook">
+    </a>
+    <a href="https://www.twitter.com" target="_blank" class="social-icon">
+        <img src="icons/twitter-x.svg" alt="Twitter">
+    </a>
+    <a href="https://www.instagram.com" target="_blank" class="social-icon">
+        <img src="icons/instagram.svg" alt="Instagram">
+    </a>
+    <a href="https://wa.me/206995489" target="_blank" class="social-icon">
+      <img src="icons/whatsapp.svg" alt="WhatsApp">
+  </a>
+    <a href="https://www.linkedin.com" target="_blank" class="social-icon">
+        <img src="icons/linkedin.svg" alt="LinkedIn">
+    </a>
+</div>
+
+<footer>
+    <p>&copy; 2024 Classic Musiq. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
