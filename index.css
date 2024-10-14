@@ -11,6 +11,8 @@ body {
   color: #030101;
   padding: 0;
   margin: 0;
+  width: 100%;
+  max-width: 900px;
 }
 
 /* Header */
