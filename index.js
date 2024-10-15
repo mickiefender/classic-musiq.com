@@ -76,7 +76,7 @@ const songs = [
         artist: 'Ms Forson ft fameye',
         album: 'Number one 1',
         albumArt: 'cover pics/fameye numbe one cover pic.jpeg',
-        audioUrl: 'songs/New Hitx/01_-_Fameye_-_Number_1.mp3',
+        audioUrl: 'songs/01_-_Fameye_-_Number_1.mp3',
         duration: '3:22',
         country: 'Ghana',
         genre: 'Afrobeat'
@@ -88,7 +88,7 @@ const songs = [
         artist: 'Cojo Cue X Shaker ft Kwesi Arthur',
         album: 'Pen and paper',
         albumArt: 'cover pics/up and awake cojo cue cover pic.jpeg',
-        audioUrl: 'songs/New Hitx/08-Up-_-Awake-ft-Kwesi-Arthur.mp3',
+        audioUrl: 'songs/08-Up-_-Awake-ft-Kwesi-Arthur.mp3',
         duration: '2:30',
         country: 'Ghana',
         genre: 'Afrobeat'
@@ -100,7 +100,7 @@ const songs = [
         artist: 'Episode ft Abiana ft Dela Botri',
         album: 'Atia',
         albumArt: 'cover pics/Epixode_Atia_Rendition cover pic.jpeg',
-        audioUrl: 'songs/New Hitx/abiana_dela_botri_on_atia_by_epixode_folk_rendition_plugnplay_sessions_mp3_45181.mp3',
+        audioUrl: 'songs/abiana_dela_botri_on_atia_by_epixode_folk_rendition_plugnplay_sessions_mp3_45181.mp3',
         duration: '2:30',
         country: 'Ghana',
         genre: 'Highlife'
@@ -111,7 +111,7 @@ const songs = [
         artist: 'Abochi',
         album: 'Short songs',
         albumArt: 'cover pics/Abochie bestie cover pic.jpeg',
-        audioUrl: 'songs/New Hitx/Abochi-–-Bestie-www.Ghanasongs.com_.mp3',
+        audioUrl: 'songs/Abochi-–-Bestie-www.Ghanasongs.com_.mp3',
         duration: '2:30',
         country: 'Ghana',
         genre: 'Afrobeat'
@@ -122,7 +122,7 @@ const songs = [
         artist: 'Adina',
         album: 'Araba',
         albumArt: 'cover pics/Adina Jeje cover pic.jpeg',
-        audioUrl: 'songs/New Hitx/Adina-–-Jeje-Prod.-by-Richie-Mensah-DownGh.com_.mp3',
+        audioUrl: 'songs/Adina-–-Jeje-Prod.-by-Richie-Mensah-DownGh.com_.mp3',
         duration: '2:30',
          country: 'Ghana'
       },
@@ -132,7 +132,7 @@ const songs = [
         artist: 'Adina ft stonebwoy',
         album: 'Take Care of you',
         albumArt: 'cover pics/Adina take care cover pic.jpeg',
-        audioUrl: 'songs/New Hitx/Adina-–-Take-Care-Of-You-ft.-Stonebwoy-Prod.-by-Street-Beatz.mp3',
+        audioUrl: 'songs/Adina-–-Take-Care-Of-You-ft.-Stonebwoy-Prod.-by-Street-Beatz.mp3',
         duration: '2:30',
          country: 'Ghana',
          genre: 'Afrobeat'
@@ -143,7 +143,7 @@ const songs = [
         artist: 'Adina Thembi',
         album: 'Araba',
         albumArt: 'cover pics/Adina why cover pic.jpeg',
-        audioUrl: 'songs/New Hitx/Adina-Why-Halmblog.com_.mp3',
+        audioUrl: 'songs/Adina-Why-Halmblog.com_.mp3',
         duration: '2:30',
          country: 'Ghana',
          genre: 'Raggae'
@@ -154,7 +154,7 @@ const songs = [
         artist: 'Akwaboah Jnr',
         album: 'Posti Me',
         albumArt: 'cover pics/Akwaboah posti me cover pic.jpeg',
-        audioUrl: 'songs/New Hitx/Akwaboah-–-Posti-Me-DownGh.com_.mp3',
+        audioUrl: 'songs/Akwaboah-–-Posti-Me-DownGh.com_.mp3',
         duration: '2:30',
          country: 'Ghana',
          genre: 'Afrobeat'
@@ -165,7 +165,7 @@ const songs = [
         artist: 'Amerado',
         album: 'Kyibom (Free hype)',
         albumArt: 'cover pics/Amerado kyibom cover pic.jpeg',
-        audioUrl: 'songs/New Hitx/amerado_kyibom_free_hype_mp3_45123.mp3',
+        audioUrl: 'songs/amerado_kyibom_free_hype_mp3_45123.mp3',
         duration: '2:30',
          country: 'Ghana',
          genre: 'Afrobeat'
