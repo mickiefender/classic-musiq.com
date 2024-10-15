@@ -9,10 +9,12 @@ body {
   font-family: 'Arial', sans-serif;
   background-color: #e0d5d5;
   color: #030101;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   padding: 0;
   margin: 0;
-  width: 100%;
-  max-width: 900px;
 }
 
 /* Header */
@@ -23,6 +25,7 @@ header {
   padding: 20px;
   background-color: #333;
   color: white;
+  position: relative;
   width: 100%; /* Full width */
 }
 
@@ -88,7 +91,9 @@ main {
   flex-direction: column;
   gap: 20px;
   padding: 20px;
+  overflow-y: auto;
   width: 100%; /* Full width */
+  flex: 1;
 }
 
 /* Song List */
@@ -156,6 +161,19 @@ main {
   background-color: #ff3300;
 }
 
+
+/* Disable user zooming */
+@media (max-width: 768px) {
+  html, body {
+      overflow-x: hidden;
+  }
+}
+
+@media (max-width: 480px) {
+  html, body {
+      overflow-x: hidden;
+  }
+}
 /* Media Player */
 .media-player {
   position: fixed;
