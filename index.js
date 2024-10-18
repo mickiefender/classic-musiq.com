@@ -176,7 +176,7 @@ const songs = [
         artist: 'Amerado',
         album: 'amerado diss',
         albumArt: 'cover pics/Amerado Lyrical Josephine.jpeg',
-        audioUrl: 'songs/New Hitx/amerado_lyrical_josephine_mp3_42833.mp3',
+        audioUrl: 'songs/amerado_lyrical_josephine_mp3_42833.mp3',
         duration: '2:30',
          country: 'Ghana',
          genre: 'Afrobeat'
@@ -187,7 +187,7 @@ const songs = [
         artist: 'Amerado',
         album: 'Obia Boa',
         albumArt: 'cover pics/amerado-obiaa-boa- cover pic.webp',
-        audioUrl: 'songs/New Hitx/amerado_obiaa_boa_official_video_mp3_55579.mp3',
+        audioUrl: 'songs/amerado_obiaa_boa_official_video_mp3_55579.mp3',
         duration: '2:30',
          country: 'Ghana',
          genre: 'Highlife'
@@ -198,7 +198,7 @@ const songs = [
         artist: 'Amerado',
         album: 'Amerado diss',
         albumArt: 'cover pics/Amerado sin no more.jpeg',
-        audioUrl: 'songs/New Hitx/amerado_sin_no_more_lyrical_joe_diss_mp3_42908.mp3',
+        audioUrl: 'songs/amerado_sin_no_more_lyrical_joe_diss_mp3_42908.mp3',
         duration: '2:17',
          country: 'Ghana',
          genre: 'Afrobeat'
@@ -209,7 +209,7 @@ const songs = [
         artist: 'Amerado',
         album: 'Me ho ye',
         albumArt: 'cover pics/Amerado Me ho y3.jpeg',
-        audioUrl: 'songs/New Hitx/Amerado-–-Me-Ho-Y3-Prod.-by-Itz-Joe-Beatz.mp3',
+        audioUrl: 'songs/Amerado-–-Me-Ho-Y3-Prod.-by-Itz-Joe-Beatz.mp3',
         duration: '3:00',
          country: 'Ghana',
          genre: 'Afrobeat'
@@ -220,7 +220,7 @@ const songs = [
         artist: 'Amg Armani ft Quamina Mp Ft Medikal',
         album: 'Allowed',
         albumArt: 'cover pics/Amg Armani Allowed cover pic.jpeg',
-        audioUrl: 'songs/New Hitx/Amg-Armani-–-Allowed-Ft.-Quamina-MP-x-Medikal-DownGh.com_.mp3',
+        audioUrl: 'songs/Amg-Armani-–-Allowed-Ft.-Quamina-MP-x-Medikal-DownGh.com_.mp3',
         duration: '4:07',
          country: 'Ghana',
          genre: 'Afrobeat'
@@ -231,7 +231,7 @@ const songs = [
         artist: 'Amg Armani ft Fameye ft Kofi Mole',
         album: 'Bye bye to property',
         albumArt: 'cover pics/Amg Armani Bye Bye cover pic.jpeg',
-        audioUrl: 'songs/New Hitx/Amg-Armani-Bye-Bye-To-Poverty-ft.-Fameye-Kofi-Mole-Ghbeatz.com_.mp3',
+        audioUrl: 'songs/Amg-Armani-Bye-Bye-To-Poverty-ft.-Fameye-Kofi-Mole-Ghbeatz.com_.mp3',
         duration: '4:19',
          country: 'Ghana',
          genre: 'Afrobeat'
@@ -242,7 +242,7 @@ const songs = [
         artist: 'Amg Armani',
         album: 'Tackle Tackle',
         albumArt: 'cover pics/Amg Armani Tackle Tackle cover pic.jpeg',
-        audioUrl: 'songs/New Hitx/Amg-Armani-Tackle-Tackle-Mixed-by-Unkle-Beatz.mp3',
+        audioUrl: 'songs/Amg-Armani-Tackle-Tackle-Mixed-by-Unkle-Beatz.mp3',
         duration: '2:55',
          country: 'Ghana',
          genre: 'Hip Hop'
