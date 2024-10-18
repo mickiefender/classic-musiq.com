@@ -189,9 +189,11 @@ main {
 
 .media-player img {
   width: 120px;
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 50%;
-  margin-bottom: 15px;
+  height: 80px; /* Maintain aspect ratio */
+  border-radius: 20%;
+  margin-bottom: px;
+  margin-right: 600px;
+
 }
 
 .media-controls {
@@ -213,6 +215,7 @@ main {
 .media-controls button:hover {
   background-color: #45a049; /* Button hover color */
 }
+
 
 /* Footer */
 footer {
