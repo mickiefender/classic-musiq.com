@@ -26,7 +26,18 @@ header {
   background-color: #333;
   color: white;
   position: relative;
+  top: fixed;
   width: 100%; /* Full width */
+  z-index: 1000; /* Ensure it stays above other content */
+  transition: top 0.1s; /* Smooth transition for the sticky effect */
+}
+/* Sticky class that locks the header at the top */
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
@@ -189,7 +200,7 @@ main {
   border-radius: 10%;
   height: 300px;
   margin-bottom: 400px;
-  margin-top: -100px;
+  margin-top: -40px;
   
   
 }
