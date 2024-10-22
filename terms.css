@@ -1,0 +1,20 @@
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    position: relative;
+    width: 100%; /* Full width */
+  }
+  header h1 {
+    margin-left: 340px;
+  }
+  .main{
+    margin-left: 300px;
+  }
+ .pp{
+    font-size: 13px;
+ }

@@ -330,7 +330,7 @@ const songs = [
         artist: 'Black Sherif',
         album: 'Money',
         albumArt: 'cover pics/Black sherif money cover pic.jpeg',
-        audioUrl: 'songs/New Hitx/Black-Sherif-–-Money-Prod.-By-Tubhani-Muzik-DownGh.com_.mp3',
+        audioUrl: 'songs/New Hitx/Black-Sherif-–-Money-Remix-ft-Amg-Armani-x-Tulenkey.mp3',
         duration: '3:23',
          country: 'Ghana',
          genre: 'Hip Hop'
@@ -475,6 +475,37 @@ const songs = [
   ];
   
   let currentSong = null;
+  let currentPlayingElement = null; // Keep track of the currently playing song element
+
+// Function to play the selected song and highlight it
+function playSong(id) {
+    const selectedSong = songs.find(song => song.id === id);
+
+    // If a song is already playing, remove the 'playing' class from the previous song
+    if (currentPlayingElement) {
+        currentPlayingElement.classList.remove('playing');
+    }
+
+    currentSong = selectedSong;
+
+    // Update the media player with the current song's details
+    document.getElementById('album-art').src = currentSong.albumArt;
+    document.getElementById('song-title').textContent = currentSong.title;
+    document.getElementById('song-artist').textContent = currentSong.artist;
+    document.getElementById('audio-player').src = currentSong.audioUrl;
+
+    const audioPlayer = document.getElementById('audio-player');
+    audioPlayer.play();
+
+    // Find the current song element and add the 'playing' class
+    currentPlayingElement = document.querySelector(`.song-item[data-id="${id}"]`);
+    if (currentPlayingElement) {
+        currentPlayingElement.classList.add('playing');
+
+        // Scroll the song into view
+        currentPlayingElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
   
   function loadSongs() {
     const songsContainer = document.getElementById('songs');
@@ -527,7 +558,7 @@ const songs = [
       songItem.innerHTML = `
         <img src="${song.albumArt}" alt="${song.title}">
         <div class="song-info">
-          <h3>${song.title}</h3>
+          <h3>${song.title}</h3>   
           <p>${song.artist} - ${song.album}</p>
         </div>
         <button onclick="playSong(${song.id})">Play</button>
@@ -586,7 +617,7 @@ const songs = [
     });
 }
 
-
+/*
 function loadPlaylists() {
   const ghanaSongsContainer = document.getElementById('ghana-songs');
   const usSongsContainer = document.getElementById('us-songs');
@@ -613,8 +644,8 @@ function loadPlaylists() {
       } else if (song.country === 'UK') {
           ukSongsContainer.appendChild(songItem);
       }
-  });
-}
+  }); 
+}*/
 
 
 function togglePlaylist(playlistId) {
@@ -780,4 +811,7 @@ function toggleArtistSongs(artist) {
     }
   });
 }
+
+
+
 
