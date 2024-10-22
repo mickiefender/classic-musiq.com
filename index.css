@@ -155,7 +155,8 @@ main {
   font-size: 12px;
   margin-left: fixed; /* Space between buttons */
   transition: background-color 0.3s ease;
- 
+  width: 45px;
+  
 }
 
 .song-item button:hover {
@@ -178,16 +179,18 @@ main {
 /* Media Player */
 .media-player {
   position:fixed;
-  bottom: 8;
-  left: 40;
+  left: fixed;
   right: 0;
   background-color: rgb(224, 127, 23);
-  padding: 20px;
-  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 1);
   text-align: center;
-  width: 42%; /* Full width */
+  width: 45%; /* Half width */
   border-radius: 10%;
   height: 300px;
+  margin-bottom: 400px;
+  margin-top: -100px;
+  
   
 }
 
@@ -201,13 +204,13 @@ main {
 }
 
 .media-controls {
-  display: flex;
+  display: fixed;
   justify-content: center;
-  gap: 10px;
+  gap: 5px;
 }
 
 .media-controls button {
-  padding: 10px 15px;
+  padding: 10px 4px;
   background-color: #133114; /* Button background color */
   color: white; /* Button text color */
   border: none;
@@ -418,7 +421,7 @@ footer {
 
 .Terms{
   color: #c6bebe;
- margin-right:700px;
+ margin-right:200px;
  font-size: 14px;
 }
 
