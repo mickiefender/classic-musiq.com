@@ -2,184 +2,192 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1, minimum-scale=1">
-  <title>CLASSIC MUSIQ</title>
-  <link rel="stylesheet" href="index.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classic Musiq</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+  <script defer src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  
 </head>
 <body>
-
-  <header id="header">
-    <h1>Classic Musiq</h1>
+  
+  <header>
+    
+    <h1>CLASSIC MUSIQ</h1>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="genres.html">Genres</a></li>
+        <li><a href="artists.html">Artists</a></li>
+        <li><a href="playlists.html">Playlists</a></li>
+        <li> <a class="loginsize" href="login.html" title="Login to your account">
+          <i class="fas fa-user-circle"></i>
+        </a></li>
+        
+      </ul>
+     
+    </nav>
     <div class="search-bar">
       <input type="text" id="search" placeholder="Search by title, artist, or album..." />
       <button onclick="searchSongs()">Search</button>
     </div>
+   
+    
   </header>
-  <select id="country-select" onchange="filterByCountry()">
-    <option value="">Select a Country</option>
-    <option value="Angola">Angola</option>
-    <option value="Benin">Benin</option>
-    <option value="Botswana">Botswana</option>
-    <option value="Burkina faso">Burkina faso</option>
-    <option value="Burundi">Burundi</option>
-    <option value="Cameroon">Cameroon</option>
-    <option value="DCR">DCR</option>
-    <option value="Ethiopia">Ethiopia</option>
-    <option value="Ghana">Ghana</option>
-    <option value="Ivory Coast">Ivory Coast</option>
-    <option value="Lesotho">Lesotho</option>
-    <option value="Liberia">Liberia</option>
-    <option value="Malawi">Malawi</option>
-    <option value="Moritius">Moritius</option>
-    <option value="Mozambique">Mozambique</option>
-    <option value="Namibia">Namibia</option>
-    <option value="Nigeria">Nigeria</option>
-    <option value="Niger">Niger</option>
-    <option value="Rwanda">Rwanda</option>
-    <option value="Senegal">Senegal</option>
-    <option value="Sierra Leon">Sierra Leon</option>
-    <option value="South Africa">South Africa</option>
-    <option value="Sudan">Sudan</option>
-    <option value="Tanzania">Tanzania</option>
-    <option value="Togo">Togo</option>
-    <option value="Kenya">UKenya</option>
-    <option value="Uganda">Uganda</option>
-    <option value="Zambia">Zambia</option>
-    <option value="Zimbabwe">Zimbabwe</option>
-    <option value="Others">Others</option>
-    <!-- Add more countries as needed -->
-</select>
-
-<div id="genre-buttons">
-  <button onclick="filterByGenre('All')">All genre</button>
-  <button onclick="filterByGenre('Raggae')">Raggae</button>
-  <button onclick="filterByGenre('Afrobeat')">Afrobeat</button>
-  <button onclick="filterByGenre('Amapiano')">Amapiano</button>
-  <button onclick="filterByGenre('Gospel')">Gospel</button>
-  <button onclick="filterByGenre('Highlife')">Highlife</button>
-  <button onclick="filterByGenre('R&B')">R&B</button>
-  <button onclick="filterByGenre('Hip Hop')">Hip Hop</button>
-  <button onclick="filterByGenre('DJ Mix')">DJ Mix</button>
-</div>
-
-  <main>
-    <section class="song-list">
-      <h2>Available Songs</h2>
-      <div id="songs">
-        
-        <!-- Song items will be dynamically inserted here -->
-      </div>
-      
-    </section>
-    
-
-    <section class="media-player" id="media-player">
-      <h2>Now Playing</h2>
-      <img src="cover pics/My pic.jpeg" alt="Album Art" id="album-art">
-      <h4 id="song-title">WELCOME TO CLASSIC MUSIQ</h4>
-      <p id="song-artist"><i> Created by mickie</i></p>
-      <audio id="audio-player" controls></audio>
-
-
-
-     <div class="media-controls">
-    <button id="shuffle-btn" onclick="toggleShuffle()">
-      <i class="fas fa-random"></i> </button>
-
-    <button id="prev-btn" onclick="skipPrev()">
-      <i class="fas fa-backward"></i></button>
-
-    <button id="play-pause-btn" onclick="playPause()">
-      <i class="fas fa-play pause"></i></button>
-
-    <button id="next-btn" onclick="skipNext()">
-      <i class="fas fa-forward"></i></button>
-
-    <button id="repeat-btn" onclick="toggleRepeat()">
-      <i class="fas fa-repeat"></i></button>
-
-    <button id="stop-btn" onclick="stopSong()">
-      <i class="fas fa-stop"></i></button>
   
-</div>
+  
 
-    </section>
-
-   <!-- Playlist Section 
-   <div  class="playlist-container" id="playlists">
-    <h2>Your Playlists</h2>
-    <div class="playlist-item">
-        <h3 onclick="togglePlaylist('ghana-songs')">Ghanaian Hits</h3>
-        <div class="playlist-songs" id="ghana-songs"></div>
+  <!-- Banner Section -->
+  <section class="banner">
+    <div class="image-container">
+      <img src="background img/singer circle img.png" alt="Artist Image">
+      
+  </section>
+  <div class="statistics-container">
+    <h2 class="gradient-text">Classic Musiq Podcast</h2>
+    <div class="stat-item">
+      <p>10m</p>
+      <span>Our Subscribers</span>
+    </div>
+    <div class="stat-item">
+      <p>150+</p>
+      <span>Dialy Visit</span>
+    </div>
+    <div class="stat-item">
+      <p>83K</p>
+      <span>Our Followers</span> 
+    </div>
+    <a href="genres.html" class="button">Browse Genres</a>
+  </div>
+<section>
+  <div class="featured-songs-container">
+  <!-- Song Card 1 -->
+  <div class="song-card">
+    <img src="background img/concert img.jpg" alt="New Generation">
+    <div class="overlay">
+      <div class="details">
+        <p>2024</p>
+        <h3>Trending Gospel Songs</h3>
+      </div>
+      <div class="play-button">▶</div>
+    </div>
   </div>
 
-    <div class="playlist">
-        <h3 onclick="togglePlaylist('us-songs')">US Hits</h3>
-        <div class="playlist-songs" id="us-songs"></div>
+  <!-- Song Card 2 -->
+  <div class="song-card">
+    <img src="background img/Singer img.jpg" alt="Recording Studio">
+    <div class="overlay">
+      <div class="details">
+        <p>40 MINS</p>
+        <h3>Recording Studio</h3>
+      </div>
+      <div class="play-button">▶</div>
     </div>
+  </div>
+
+  <!-- Song Card 3 -->
+  <div class="song-card">
+    <img src="background img/Unknown 2.jpeg" alt="Vocals acapella">
+    <div class="overlay">
+      <div class="details">
+        <p>20 MINS</p>
+        <h3>Vocals acapella</h3>
+      </div>
+      <div class="play-button">▶</div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<section>
+<section class="concert-section">
+  <div class="event-header">
+    <i class="fa fa-calendar-alt"></i> <!-- Calendar Icon -->
+    <h2>Upcoming Events</h2>
+  </div>
+
+  <p>December is a very important month in Ghana. It marks the last month of the year and to christians,<br>
+  it is the month which Jesus Christ was born. This makes the month of December packed with so much activities. <br> 
+Below are some importanat events in ghana in the month of December</p>
+  <div class="concert-grid">
+    <!-- Concert Card 1 -->
+    <div class="concert-card" data-aos="fade-up">
+      <div class="concert-cover">
+        <img src="background img/rhythm of africa event.jpg" alt="Concert Cover">
+      </div>
+      <div class="concert-info">
+        <h3>Sonie Badu</h3>
+        <p class="date">Dec 9, 2024</p>
+        <p class="location">Grand Arena, Accra Ghana</p>
+        <a href="https://www.instagram.com/sonniebaduuk?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="button">Free Ticket</a>
+      </div>
+    </div>
+
+    <!-- Concert Card 2 -->
+    <div class="concert-card" data-aos="fade-right">
+      <div class="concert-cover">
+        <img src="background img/made in taadi event 2.jpg" alt="Concert Cover">
+      </div>
+      <div class="concert-info">
+        <h3>Kofi Kinaata</h3>
+        <p class="date">Dec 24, 2024</p>
+        <p class="location">Takoradi Technical University Park</p>
+        <a href="https://www.instagram.com/kinaatagh/?utm_source=ig_web_button_share_sheet" class="button">Free Tickets</a>
+      </div>
+    </div>
+</section>
+
+
+  <!-- Main Content -->
+  <main>
+    <!-- Placeholder for Homepage Sections -->
+      <section class="featured">
+        <button class="featuredT" id="toggle-songs-btn" onclick="toggleSongs()">Show Songs</button> <!-- Added inline cursor style -->
+      <div id="featured-songs">
+    </section>
+    <div class="pagination-controls">
+      <button id="prev-page" onclick="prevPage()">Previous Page</button>
+      <button id="next-page" onclick="nextPage()">Next Page</button>
+    </div>
+    
 
     
-    <div class="playlist">
-        <h3 onclick="togglePlaylist('black-sherif')">black Sherif</h3>
-        <div class="artist-songs" id="black-sherif"></div>
-    </div>
-    <div class="playlist">
-      <h3 onclick="togglePlaylist('Nigeria-songs')">Nigeria Hits</h3>
-      <div class="playlist-songs" id="Nigeria-songs"></div>
-  </div>
-  <div class="playlist">
-    <h3 onclick="togglePlaylist('Kenya-songs')">Kenya Hits</h3>
-    <div class="playlist-songs" id="Kenya-songs"></div>
-</div>
-<div class="playlist">
-  <h3 onclick="togglePlaylist('Tanzania-songs')">Tanzania Hits</h3>
-  <div class="playlist-songs" id="Tanzania-songs"></div>
-</div>
-<div class="playlist">
-  <h3 onclick="togglePlaylist('South Africa-songs')">South Africa Hits</h3>
-  <div class="playlist-songs" id="South Africa-songs"></div>
-</div>
-<div class="playlist">
-  <h3 onclick="togglePlaylist('Uganda-songs')">Uganda Hits</h3>
-  <div class="playlist-songs" id="Uganda-songs"></div>
-</div>
-
-</div>
--->
-
-
-
-  </main>
+        <!-- Media Player -->
  
+      <div class="media-player-container">
+      <div id="player-controls">
+        <audio  id="audio-player" controls></audio>
+        <div class="media-buttons">
+          <button id="prev-btn">⏮</button>
+          <button id="play-pause-btn">▶</button>
+          <button id="next-btn">⏭</button>
+     
+        </div>
+      </div>
+      <div>
+    </section>
+  </main>
 
-  <script src="index.js"></script>
+  <!-- Footer -->
+  <footer>
+    <div class="social-links">
+      <!-- Add Social Media Icons Here -->
+      <a href="https://www.facebook.com"><img src="icons/facebook.svg" alt=""></a>
+      <a href="https://www.twitter.com"><img src="icons/twitter-x.svg" alt=""></a>
+      <a href="https://wa.me/1234567890"><img src="icons/whatsapp.svg" alt=""></a>
+      <a href="https://www.instagram.com"><img src="icons/instagram.svg" alt=""></a>
+     <a href="https://www.tiktok.com/@yourusername"><img src="icons/tiktok.svg" alt="TikTok"></a>
+   
 
-  <!-- Footer Section -->
-  <div class="social-media">
-    <a href="https://www.facebook.com" target="_blank" class="social-icon">
-        <img src="icons/facebook.svg" alt="Facebook">
-    </a>
-    <a href="https://www.twitter.com" target="_blank" class="social-icon">
-        <img src="icons/twitter-x.svg" alt="Twitter">
-    </a>
-    <a href="https://www.instagram.com" target="_blank" class="social-icon">
-        <img src="icons/instagram.svg" alt="Instagram">
-    </a>
-    <a href="https://wa.me/206995489" target="_blank" class="social-icon">
-      <img src="icons/whatsapp.svg" alt="WhatsApp">
-  </a>
-    <a href="https://www.linkedin.com" target="_blank" class="social-icon">
-        <img src="icons/linkedin.svg" alt="LinkedIn">
-    </a>
-</div>
 
-<footer>
-    <p>&copy; 2024 Classic Musiq. All rights reserved.</p><br><br>
-    <a class="Terms" href="terms.html">Terms and condition</a><br><br>
-    <a class="Terms" href="Terms">Privacy policy</a>
-
-</footer>
-
+    </div>
+    <div class="footer-content">
+      <p>&copy; 2024 Classic Musiq | All Rights Reserved</p>
+      <a href="developer.html" class="about-developer-link">About Developer</a>
+    </div>
+  </footer>
 </body>
 </html>
